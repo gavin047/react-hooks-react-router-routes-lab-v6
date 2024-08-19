@@ -1,12 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './MovieCard.css'; // import the CSS file
 
 function MovieCard({ movie }) {
   return (
     <div className="movie-card">
       <h2>{movie.title}</h2>
-      <a href={`/movie/${movie.id}`}>View Info</a>
-
+      <Link to={`/movie/${movie.id}`} className="view-info-link">
+        View Info
+      </Link>
     </div>
   );
 }
